@@ -27,11 +27,13 @@ const mixin = {
 
 				if (dragDistance > this.swipeDistance && this.canGoToPrev) {
 					this.goToPrev()
+					this.restartAutoPlay()
 					this.handleMouseUp()
 				}
 
 				if (dragDistance < -1 * this.swipeDistance && this.canGoToNext) {
 					this.goToNext()
+					this.restartAutoPlay()
 					this.handleMouseUp()
 				}
 			}
